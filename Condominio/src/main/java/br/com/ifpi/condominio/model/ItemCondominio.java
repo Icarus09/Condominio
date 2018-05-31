@@ -1,6 +1,5 @@
 package br.com.ifpi.condominio.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -31,5 +30,46 @@ public class ItemCondominio { // uma despesa do condominio.
 	@ManyToOne
     @JoinColumn(name = "id_condominio", nullable = false)
 	private Condominio condominio;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getReferencia() {
+		return referencia;
+	}
+
+	public void setReferencia(String referencia) {
+		this.referencia = referencia;
+	}
+
+	public double getValor() {
+		return valor;
+	}
+
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
+
+	public Despesa getDespesa() {
+		return despesa;
+	}
+
+	public void setDespesa(Despesa despesa) {
+		this.despesa = despesa;
+	}
+
+	public Condominio getCondominio() {
+		return condominio;
+	}
+
+	public void setCondominio(Condominio condominio) {
+		this.condominio = condominio;
+	}
+	
 	
 }
